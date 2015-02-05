@@ -1,0 +1,10 @@
+<h1>What have we got here?</h1>
+
+<p>We have <%= @body_types.count %> body types</p>
+<% @body_types.each do |body_type| %>
+
+  <p>We have a
+    <%= link_to(body_type.name, body_type_path(body_type)) %>
+  </p>
+
+<% end %>
